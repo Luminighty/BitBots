@@ -1,10 +1,16 @@
+/*
+  Author: Alias
+  Date: 28/3/2021
+
+  Tests src/game/unit.ts
+*/
 import {Unit} from "../src/game/unit";
 import {Vector2} from "../src/game/data_structures/vector2";
 import {Settings} from "../src/game/settings";
 
 var assert = require("assert");
 
-describe("bot_tests", function() {
+describe("unit.ts", function() {
   describe("moving", function() {
     it("should move the bot on the map within its bounds if it is able to move.", function() {
         var u = new Unit();
