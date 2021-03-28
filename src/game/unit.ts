@@ -1,13 +1,20 @@
+/*
+  Author: Alias
+  Date: 28/3/2021
+
+  The Unit class is the base class for anything we wish to put on the BitBots map.
+*/
 import {Vector2} from "./data_structures/vector2";
 import {Settings} from "./settings";
 
 export class Unit {
-  private id: number;
+  private ownerId: number;
+  private unitId: number;
   private position: Vector2;
   private canMove: bool;
 
   constructor() {
-    this.id = -1;
+    this.unitId = -1;
     this.position = new Vector2(-1, -1);
     this.canMove = false;
   }
@@ -71,11 +78,11 @@ export class Unit {
     this.position.y  = y;
   }
 
-  public getId(): number {
-    return this.id;
+  public getUnitId(): number {
+    return this.unitId;
   }
 
-  public setId(id: number) {
-    this.id = id;
+  public setUnitId(unitId: number) {
+    this.unitId = unitId;
   }
 }
