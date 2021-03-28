@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon src/index.ts"
+    "start": "nodemon src/index.ts",
+    "test" : "mocha test/**/*.ts --recursive"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/node": "^14.14.37",
+    "mocha": "^8.3.2",
     "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
