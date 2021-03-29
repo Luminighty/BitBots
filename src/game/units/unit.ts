@@ -12,6 +12,7 @@ export class Unit extends MapObject{
   private canMove: bool;
 
   constructor() {
+    super();
     this.unitId = -1;
     this.position = new Vector2(-1, -1);
     this.canMove = false;

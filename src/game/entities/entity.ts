@@ -9,6 +9,7 @@ import {MapObject} from "../map_object";
 
 export class Entity extends MapObject {
   constructor(x: number, y: number) {
+    super();
     this.setPositionV2(new Vector2(x, y));
   }
 }
