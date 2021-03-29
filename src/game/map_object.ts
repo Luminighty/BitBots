@@ -15,9 +15,8 @@ export class MapObject {
     return this.position;
   }
 
-  public setPosition(x: number, y: number) {
-    this.position.x = x;
-    this.position.y = y;
+  public setPosition(pos: Vector2) {
+    this.position = pos;
   }
 
   public getHp(): number {

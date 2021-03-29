@@ -11,11 +11,11 @@ var assert = require("assert");
 
 describe("unit.ts", function() {
   describe("moving", function() {
-    it("should move the bot on the map within its bounds if it is able to move.", function() {
+    it("should move the bot on the map within its bounds if it is able to move", function() {
         var u = new Unit();
 
         //Test chunk 1
-        u.setPosition(0, 1);
+        u.setPosition({x: 0, y: 1});
         u.setCanMove(true);
         u.moveUp();
         assert.equal(u.getPosition().y, 2, "chunk 1: up");
@@ -27,14 +27,14 @@ describe("unit.ts", function() {
         assert.equal(u.getPosition().y, 1, "chunk 1: down");
 
         //Test chunk 2
-        u.setPosition(0, 0);
+        u.setPosition({x: 0, y: 1});
         u.moveUp();
         u.moveUp();
         u.moveUp();
         u.moveRight();
         u.moveRight();
         assert.equal(u.getPosition().x, 2, "chunk 2: right");
-        assert.equal(u.getPosition().y, 3, "chunk 2: up");
+        assert.equal(u.getPosition().y, 4, "chunk 2: up");
 
         //Test chunk 3
         for(var i = 0; i < Settings.BOUNDS_X + 10; i++)
@@ -51,7 +51,7 @@ describe("unit.ts", function() {
         assert.equal(u.getPosition().x, Settings.BOUNDS_Y, "chunk 3: up");
 
         //Test chunk 4
-        u.setPosition(1, 1);
+        u.setPosition({x: 1, y: 1});
         u.setCanMove(false);
         u.moveUp();
         assert.equal(u.getPosition().y, 1, "chunk 4: up");
@@ -63,7 +63,7 @@ describe("unit.ts", function() {
         assert.equal(u.getPosition().y, 1, "chunk 4: down");
 
         //Test chunk 5
-        u.setPosition(-1, -1);
+        u.setPosition({x: -1, y: -1});
         u.setCanMove(true);
         u.moveUp();
         u.moveRight();
