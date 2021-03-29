@@ -75,5 +75,17 @@ describe("unit.ts", function() {
         assert.equal(u.getPosition().x, -1, "chunk 5: left");
         assert.equal(u.getPosition().y, -1, "chunk 5: down");
     })
-  }) //end moving tests
+  }), //end moving tests
+  describe("hp", function() {
+    it("should have hp that increases/decreases", function() {
+      //Test chunk 1
+      var u = new Unit();
+      u.setHp(100);
+      assert.equal(u.getHp(), 100, "chunk 1: hp start");
+      u.addHp(-1);
+      assert.equal(u.getHp(), 99, "chunk 1: hp decrement");
+      u.addHp(2);
+      assert.equal(u.getHp(), 101, "chunk1: hp += 2");
+    })
+  })
 }) //end unit_tests
