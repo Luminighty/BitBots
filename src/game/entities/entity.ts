@@ -10,6 +10,6 @@ import {MapObject} from "../map_object";
 export class Entity extends MapObject {
   constructor(x: number, y: number) {
     super();
-    this.setPositionV2({x: x, y: y});
+    this.setPosition({x: x, y: y});
   }
 }
