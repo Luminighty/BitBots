@@ -4,7 +4,7 @@
 
   Tests src/game/unit.ts
 */
-import {Unit} from "../src/game/unit";
+import {Unit} from "../src/game/units/unit";
 import {Vector2} from "../src/game/data_structures/vector2";
 import {Settings} from "../src/game/settings";
 

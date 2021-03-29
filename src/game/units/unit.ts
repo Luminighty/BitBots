@@ -4,9 +4,9 @@
 
   The Unit class is the base class for anything we wish to put on the BitBots map.
 */
-import {Vector2} from "./data_structures/vector2";
-import {Settings} from "./settings";
-import {MapObject} from "./map_object";
+import {Vector2} from "../data_structures/vector2";
+import {Settings} from "../settings";
+import {MapObject} from "../map_object";
 
 export class Unit extends MapObject{
   private canMove: bool;
