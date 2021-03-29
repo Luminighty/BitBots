@@ -10,6 +10,24 @@ export class MapObject {
   private position: Vector2;
   private hp: number;
   private ownerId: number;
+  private objName: string;
+  private objDescription: string;
+
+  public getName(): string {
+    return this.objName;
+  }
+
+  public setName(name: string) {
+    this.objName = name;
+  }
+
+  public getDescription(): string {
+    return this.objDescription;
+  }
+
+  public setDescription(desc: name) {
+    this.objDescription = desc;
+  }
 
   public getPosition(): Vector2 {
     return this.position;
