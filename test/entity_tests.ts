@@ -5,7 +5,6 @@
   Tests src/game/entity.ts
 */
 import {Entity} from "../src/game/entities/entity";
-import {Vector2} from "../data_structures/vector2";
 
 var assert = require("assert");
 

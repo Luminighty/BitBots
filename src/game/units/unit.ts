@@ -4,7 +4,6 @@
 
   The Unit class is the base class for anything we wish to put on the BitBots map.
 */
-import {Vector2} from "../data_structures/vector2";
 import {Settings} from "../settings";
 import {MapObject} from "../map_object";
 
@@ -14,7 +13,7 @@ export class Unit extends MapObject{
   constructor() {
     super();
     this.unitId = -1;
-    this.position = new Vector2(-1, -1);
+    this.position = {x: -1, y: -1};
     this.canMove = false;
   }
 
