@@ -6,11 +6,9 @@
 */
 import {Vector2} from "./data_structures/vector2";
 import {Settings} from "./settings";
+import {MapObject} from "./map_object";
 
-export class Unit {
-  private ownerId: number;
-  private unitId: number;
-  private position: Vector2;
+export class Unit extends MapObject{
   private canMove: bool;
 
   constructor() {
@@ -63,26 +61,5 @@ export class Unit {
 
   public setCanMove(canMove: bool) {
     this.canMove = canMove;
-  }
-
-  public getPosition() : Vector2 {
-    return this.position;
-  }
-
-  public setPositionV2(position: Vector2) {
-    this.position = position;
-  }
-
-  public setPosition(x: number, y: number) {
-    this.position.x = x;
-    this.position.y  = y;
-  }
-
-  public getUnitId(): number {
-    return this.unitId;
-  }
-
-  public setUnitId(unitId: number) {
-    this.unitId = unitId;
   }
 }
