@@ -8,6 +8,12 @@ fn index() -> content::Json<&'static str> {
     content::Json("{ \"hi\": \"world\" }")
 }
 
+mod routes;
+mod game;
+
 fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+    rocket::ignite()
+    .mount("/",    routes![index])
+    .mount("/bot", routes::bot_routes())
+    .launch();
 }
